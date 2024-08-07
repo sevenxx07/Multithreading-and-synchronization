@@ -8,9 +8,9 @@ The producer complies with the following:
 * It reads from standard input “commands” in the form of <X> <word> pairs, where <X> is a non-negative integer and <word> is any non-empty sequence of characters (except whitespace).
   X is separated from the word by one space, individual commands are always separated from each other by the end of the line (\n). There may or may not be a newline (\n) at the end of the input.
 * So a valid input might look like this:<br />
-    &nbsp;20 foo<br />
-    &nbsp;5 bar<br />
-    &nbsp;1 base<br />
+    &nbsp; &nbsp;20 foo<br />
+    &nbsp; &nbsp;5 bar<br />
+    &nbsp; &nbsp;1 base<br />
 * The word length is limited only by the amount of available memory. This means that is needed to store the word in memory once. We may not have enough memory for multiple copies.
 * If an invalid command (ie not matching the previous point) is entered, the program exits with a return code of 1, but only after the previous, valid commands have been processed.
 * For each command read, it dynamically allocates (malloc(), new, …) a data structure, stores X and a word in it, and puts it at the end of the linked list.
